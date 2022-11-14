@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // react => javascript ECMA 6 version 2015 
+
+        // créer une fonction avant 2015
+        function a(){
+
+        }
+        // créer une fonction avant 2015
+        var b = function(){ }
+
+        // à partir de la version 6 de javascript 
+        // arrow function fonction fléchée
+
+        const c = () => {}
+
+        // les différences entre une fonction classique et une fonction fléchée
+
+        const addition = function(a){ }
+        // si un seul paramètre => parenthèses sont facultatives
+        const addition2 = (a) => { }
+        const addition3 = a => { }
+
+        const soustraction = function() {}
+        // si 0 paramètre les parenthèses sont OBLIGATOIRES
+        const soustraction2 = () => {}
+
+        const division = function (a, b) {}
+        // si supérieur à 1 paramètre les parenthèses sont OBLIGATOIRES
+        const division2 = (a, b) => {}
+
+        const puissance = function (a, b){
+            // contient 1 seul instructions et avec return
+            return Math.pow(a, b); 
+        }
+
+        const puissance2 = (a,b) => {
+            return Math.pow(a, b);
+        }
+
+        const puissance3 = (a,b) => Math.pow(a, b);
+        
+        const operation = function(a){
+            const b = 10 ;
+            return a + b ; 
+        }
+
+        const operation2 = a => {
+            const b = 10 ;
+            return a + b ; 
+        }
+
+        // sucre syntaxique 
+
+        const getUser = () => {
+            return { id : 1 , nom : "Alain" }
+        }
+
+        const getUser2 = () => ({ id : 1 , nom : "Alain" })
+
+
+        const users = [ 
+            {id : 1 , nom : "Alain" , isAdmin : true} ,
+            {id : 2 , nom : "Céline" , isAdmin : false} 
+        ];
+
+        // récupérer tous les utilisateurs qui sont admin 
+        const userAdmin = [];
+        for(let user of users){
+            if(user.isAdmin){
+                userAdmin.push(user)
+            }
+        }
+        console.log(userAdmin);
+
+        const userAdmin2 = users.filter(function( user ){ 
+            return user.isAdmin
+        } )
+        console.log(userAdmin2);
+
+        const userAdmin3 = users.filter( user  =>  user.isAdmin)
+        console.log(userAdmin3);
+
+    </script>
+</body>
+</html>

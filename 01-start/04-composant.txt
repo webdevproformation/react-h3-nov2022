@@ -1,0 +1,2 @@
+dans le dossier src/
+créer un dossier composants

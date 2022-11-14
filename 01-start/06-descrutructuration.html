@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fleur = {
+            nom : "rose" ,
+            prix : 20 ,
+            unite : "euros",
+            description : {
+                hauteur : 20,
+                couleur : "#00000"
+            }
+        }
+        // méthode classique
+        console.log(fleur.prix); 
+
+        // à partir de la version 6 de js 
+        const { prix } = fleur ;
+        const { couleur } = fleur.description ;
+
+        function getFleur (objet){
+            if(objet.prix > 10){
+                return "je suis en promotion"; 
+            }
+        }
+
+        function getFleur2 ({prix}){
+            if(prix > 10){
+                return "je suis en promotion"; 
+            }
+        }
+
+        const getFleur3 = ({prix}) => {
+            if(prix > 10){
+                return "je suis en promotion"; 
+            }
+        }
+
+        const getFleur4 = ({prix}) => {
+            return (prix > 10) && "je suis en promotion"
+        }
+
+        const getFleur5 = ({prix}) => (prix > 10) && "je suis en promotion" ;
+       
+        console.log(getFleur5(fleur))
+
+
+
+
+
+    </script>
+</body>
+</html>
