@@ -1,0 +1,109 @@
+url : https://formation.webdevpro.net/react/
+login : react 
+password : fb 
+
+----
+
+React / React.js / ReactJS 
+
+=> la même chose
+
+=> grosse librairie => équipe de Facebook 
+en 2011
+=> dernière version disponible
+
+=> documentation officielle => https://fr.reactjs.org/
+
+
+=> Element de base d'une application sur react => Composant 
+brique de base de toute application React 
+
+=> Arbre de composant 
+
+App (composant racine de l'application)
+    barre de menu 
+    zone article 
+        Article 
+            Contenu
+            Like 
+        Article 
+        Article 
+    pied de page 
+
+// version class
+class Article{
+    render(){
+        return <>un peu de texte pour l'article </>
+    }
+}
+
+// version fonctionnelle 
+function Article(){
+    return <>un peu de texte pour l'article </>
+}
+
+
+=> React utilise un concept pour manipuler le DOM (Document Object Model) => Virtual DOM 
+
+=> permet de pouvoir réaliser des modifications dans nos pages web 
+=> très rapidement / une quantité de mémoire faible 
+
+
+Angular Versus React 
+
+=> Framework => installé dès que tu mets en place un projet Angular 
+très très grosse librairie 
+
+=> React => librairie gestion DOM MAIS requête http ajax / routing 
+Ajouter en + librairie 
+
+
+url : https://formation.webdevpro.net/react/
+login : react 
+password : fb 
+
+
+
+=> https://nodejs.org/fr/
+=> télécharger la version 18.12.1 
+=> si vous l'avez déjà => réinistaller mettre à jour 
+
+=> lancer un terminal 
+node -v 
+
+=> npm -v
+
+npm install .... => https://www.npmjs.com/
+
+npm -g i => npm --global install => installer vos binaires de manière globale
+possible de les utiliser sur plusieurs projets 
+
+npm i  => npm install => installer vos binaires en local utilisable uniquement dans le projet en cours (pas sur les autres )
+
+npx => npm -x => npm -exec  => installer vos binaires dans une zone de cache de votre ordinateur 
+éviter de polluer votre environnement global 
+
+=> https://fr.reactjs.org/docs/create-a-new-react-app.html
+
+npx create-react-app jour1 
+
+npx télécharger sur le site https://www.npmjs.com/ et mettre en cache et exécuter 
+create-react-app => créer le projet 
+jour1  nom du projet
+
+
+=> télécharger et exécuter le binaire 
+
+=> installer une extension sur Visual Studio Code 
+
+extension > installer "Simple React Snippets" de Burke Holland 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+npx create-react-app jour1 
+
+=> créer un dossier jour1 
+=> toute une structure créée 
+package.json => décrit l'ensemble des dépendances de votre projet 
+
+"@testing-library/jest-dom": "^5.16.5",
+"@testing-library/react": "^13.4.0",
+"@testing-library/user-event": "^13.5.0",
+test intégration / unitaire ...
+"react": "^18.2.0", // installé react 
+"react-dom": "^18.2.0", // version pour créer des sites internet 
+"react-scripts": "5.0.1", // react script lancer des lignes de commande 
+"web-vitals": "^2.1.4" // message d'erreur clair pendant la phase de dev
+
+public => 
+index.html
+
+<div id="root"></div> => TOUTE ce que l'on va réaliser durant la semaine 
+va être injecté par React dans cette balise 
+
+phase de développement => pas de balise <script> 
+phase de prod (build) => il y a des balises <script> 
+
+=> générer automatiquement ces balises script 
+
+pendant la phase de développement 
+
+babel.io 
+
+=> dans le dossier public 
+il est possible de créer des dossiers / stocker les assets image / logo / font / pdf ... 
+
+=> le dossier le plus important src (source)
+
+le fichier lien entre votre index.html => votre application React 
+
+index.js => lien entre index.html ET le composant racine App.js 
+
+import App from "./App"
+
+ReactDOM.createRoot( document.getElementById("root")  , root.render( 
+....
+    <App />
+)  )
+
+
+src/App.js
+
+3 parties 
+
+import logo from './logo.svg';
+import './App.css';
+
+function App(){
+    return (
+        jsx => html et xml et du javascript 
+        => transformé en javascript donné directement en javascript 
+    )
+} // le composant racine 
+
+export default App ; 
+
+
+
+=> https://babeljs.io/repl
+
+
+
+cd jour1
+npm start => react-scripts start 
+commande identique
+
+
+http://localhost:3000/ 
+
+
+npx create-react-app jour1
+
+cd jour1 
+npm start
