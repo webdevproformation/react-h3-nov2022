@@ -2,11 +2,15 @@
 import './App.css'; 
 import React from "react"; 
 import { Premier } from "./composants/Premier"
+import { Deuxieme } from "./composants/Deuxieme"
+import BoucleCondition from './composants/BoucleCondition';
 
 function App() {
   return (
     <div className="App">
       <Premier />
+      <Deuxieme />
+      <BoucleCondition />
       {/*
        * commentaire en jsx 
        * binaire 0 ou 1 

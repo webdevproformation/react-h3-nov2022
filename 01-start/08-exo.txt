@@ -1,0 +1,12 @@
+
+Cas pratique
+1 créer un composant dans le dossier composants
+qui s'appelle Deuxieme
+
+ce composant retourne le jsx suivant : 
+<ul>
+    <li>premier</li>
+    <li><img src="https://via.placeholder.com/200" alt=""></li>
+</ul>
+
+2 appeler ce composant dans le composant App.js 
