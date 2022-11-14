@@ -1,10 +1,12 @@
 /* import logo from './logo.svg';*/
 import './App.css'; 
 import React from "react"; 
+import { Premier } from "./composants/Premier"
 
 function App() {
   return (
     <div className="App">
+      <Premier />
       {/*
        * commentaire en jsx 
        * binaire 0 ou 1 
