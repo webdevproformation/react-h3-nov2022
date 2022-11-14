@@ -10,3 +10,13 @@ ce composant retourne le jsx suivant :
 </ul>
 
 2 appeler ce composant dans le composant App.js 
+
+
+
+3 créer  le composant Boucle 
+dans ce composant stocker le tableau suivant 
+
+[
+    
+]
+
