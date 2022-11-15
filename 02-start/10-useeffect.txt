@@ -21,3 +21,18 @@ useEffect( () => {
 } ) // les traitements vont être exécuté autant de fois que j'ai d'update  
 
 
+créer un nouveau composant Exo 6
+
+besoin de 2 hooks :
+const [article , setArticle] = useState ({})
+useEffect va s'exécuter uniquement lors du chargement du composant 
+et va réaliser une requête ajax sur l'url suivant :
+https://jsonplaceholder.typicode.com/posts/1
+
+au niveau du render 
+
+<div className="col-3">
+    <h1>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h1>
+    <p>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</p>
+<div>
+
