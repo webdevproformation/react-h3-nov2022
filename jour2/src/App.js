@@ -4,6 +4,7 @@ import Event from "./composants/Event";
 import Exo2 from "./composants/Exo2";
 import State from "./composants/State";
 import State2 from "./composants/State2";
+import Exo3 from "./composants/Exo3";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Exo2 />
             <State />
             <State2 />
+            <Exo3 />
           </div>
         </main> 
         
