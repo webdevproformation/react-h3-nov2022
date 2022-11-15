@@ -1,6 +1,5 @@
 Cas pratique 
 créer le composant Exo2 
-
 ce composant contient un tableau d'objet  articles 
 [
     {id : 1 , titre :"article 1" , publie : true }
