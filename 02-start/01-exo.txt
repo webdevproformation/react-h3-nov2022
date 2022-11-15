@@ -14,3 +14,9 @@ si vous survoler un des éléments => afficher le contenu du titre dans la conso
     <li>article 1</li>
     <li>article 4</li>
 </ul>
+
+Cas pratique :
+
+Dans le composant State, 
+- ajouter un nouveau bouton "diminuer" de couleur rouge
+- si vous cliquez dessus => diminue le compteur de -1 
