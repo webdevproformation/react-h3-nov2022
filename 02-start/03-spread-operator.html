@@ -7,6 +7,61 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // nouveauté de la version 6 de javascript 
+        // spread operator 
+
+        // ...
+        // + - / * 
+        const a = 2 + 3 ; // valeur opérateur valeur 
+
+        // ! opérateur uniaire 
+        const b = !false ; // opérateur valeur 
+
+        // ... opérateur unaire 
+        // ... array et les objets 
+
+        // ... récupérer tout le contenu de l'objet ou du tableau 
+
+        const c = [1,2,3];
+        const d = [4,5,6] ;
+
+        // créer une nouvelle variable qui contient [1,2,3,4,5,6]
+        // fusion / merge de c et d 
+
+        const e = c.concat(d);
+        console.log(e);
+
+        const f = [ ...c , ...d ]; // [1,2,3,4,5,6]
+        console.log(f);
+
+        const etudiant = {id : 1 , nom : "Alain"};
+        const infos = {adresse : "75 rue de Paris" , ville : "Paris"}
+
+        const etudiantComplet = {...etudiant , ...infos};
+        // {id : 1 , nom : "Alain" , adresse : "75 rue de Paris" , ville : "Paris"}
+        console.log(etudiantComplet);
+
+        const fleur = { nom : "lilas" , prix : 20};
+        const details = {   prix : 50 , unite : "euros"};
+
+        const fleurComplet = {...fleur , ...details};
+        // {nom : "lilas" , prix : 20 , prix : 50 , unite : "euros"}
+        console.log(fleurComplet);
+
+        const formulaireInitial = {login : "" , password: ""};
+        const formulaireComplete = {login : "" , password: "azerty"};
+
+        const formulaireSoumis = {...formulaireInitial , ...formulaireComplete};
+        console.log(formulaireSoumis);
+        const formulaireSoumis2 = { ...formulaireComplete , ...formulaireInitial }; // attention à l'ordre 
+        console.log(formulaireSoumis2);
+
+        // avant 2015 
+        const form3 = Object.assign({} , formulaireInitial , formulaireComplete)
+        console.log(form3);
+
+
+    </script>
 </body>
 </html>
