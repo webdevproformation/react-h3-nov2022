@@ -6,6 +6,7 @@ import State from "./composants/State";
 import State2 from "./composants/State2";
 import Exo3 from "./composants/Exo3";
 import Articles from "./composants/Articles";
+import Etudiants from "./composants/Etudiants";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <State2 />
             <Exo3 />
             <Articles />
+            <Etudiants />
           </div>
         </main> 
         

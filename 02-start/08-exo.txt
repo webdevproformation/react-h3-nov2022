@@ -1,12 +1,10 @@
 créer les composants suivants 
-
-Etudiants 
- [
+- Etudiants 
+[
     {id : 1 , nom : "Alain" , actif : true},
     {id : 2 , nom : "Béatrice" , actif : false},
- ]
-
-Etudiant
+]
+- Etudiant
 récupérer pour chaque élément du state du parent
 les valeurs associées 
 <p> nom Alain <bouton>activer</bouton> 
@@ -14,4 +12,5 @@ les valeurs associées
     si inactif => 🌋 
 </p>
 
+- images disponibles à l'adresse suivante : 
 https://emojipedia.org/
