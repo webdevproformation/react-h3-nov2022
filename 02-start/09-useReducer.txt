@@ -1,0 +1,20 @@
+
+const [valeur , setValeur] = useState( 0 ) ; un état / state dans le composant
+
+augmenter = () => {
+    setValeur(valeur + 1)
+} 
+
+diminuer = () => {
+    setValeur(valeur - 1)
+} 
+
+zero = () => {
+    setValeur(0)
+} 
+
+const fonctionReductrice(){
+    // stocker toutes les actions que l'on veut réaliser sur le state  
+}
+
+const [ nb , dispatch  ] = useReducer( fonctionReductrice  , 0 )
