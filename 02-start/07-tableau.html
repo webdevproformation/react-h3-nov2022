@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // tableau 
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+        const a = [1,2,3];
+
+        // manipulations de base 
+
+        // .push() ajouter à la fin 
+        a.push(4,5); // [1,2,3,4,5]
+        // unshift() ajouter au debut
+        a.unshift(0,-1); // [0,-1 , 1,2,3,4,5]
+        // ajouter au milieu du tableau entre 2 et 3 
+        a.splice(4, 0 , "bonjour")
+        console.log(a);
+
+        // manipulation du tableau => tableau qui contient les chiffres >= 3
+        // exécuté autant de fois que j'ai d'éléments dans la tableau
+        const aSup3 =  a.filter((element) => { return element >= 3 })
+        console.log(aSup3);
+
+        // .map()
+        // prendre chaque élément du tableau et de le modifié
+        // [0,-1 , 1,2 ,"bonjour",3,4,5]
+        // [<li>0</li>,<li>-1</li> , <li>1</li>,<li>2</li> ,"<li>bonjour</li>",<li>3</li>,<li>4</li>,<li>5</li>]
+        const aLi = a.map((element) => { return "<li>"+ element + "</li>"}) 
+        console.log(aLi)
+
+
+        const fleurs = [{id : 1 , nom : "rose"} , {id: 2, nom : "lilas"}]
+
+        // est ce que dans la tableau fleurs ??? un objet qui contient la valeur nom : "orange"
+
+        const fleurRecherchee = fleurs.find((elemnt) => { return elemnt.nom === "orange"});
+        console.log(fleurRecherchee) // undefined
+
+        const fleurRecherchee2 = fleurs.find((elemnt) => { return elemnt.nom === "rose"});
+        console.log(fleurRecherchee2) // { id: 1, nom: "rose" }
+
+        // autre outil de recherche .indexOf()
+        const etudiant = ["Alain", "Benoit", "Céline"];
+
+        const position = etudiant.indexOf("Zorro")
+        console.log(position); // -1 
+        const position2 = etudiant.indexOf("Céline")
+        console.log(position2); //  2
+
+
+        // recherche dans un tableau qui contient des objets 
+        // est ce que un des objet dispose de la propriété id et === 1
+        const fleurRecherchee3 = fleurs.find((elemnt) => { return elemnt.id === 2});
+        // quelle est la position de cet objet dans le tableau de 
+        const index = fleurs.indexOf(fleurRecherchee3); 
+
+        fleurs[index].nom = "tournesol";
+        console.log(fleurs);
+
+    </script>
+</body>
+</html>

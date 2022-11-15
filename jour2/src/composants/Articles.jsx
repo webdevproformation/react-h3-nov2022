@@ -19,11 +19,13 @@ const Articles = () => {
 
     return ( 
     <div className="col-3">
-        {articles.map((article , index) => {
-            return <Article key={index} data={article} augmenter={augmenter}/>
-            {/** possible de passer des valeurs MAIS aussi des fonctions */}
+        <h2>communication entre composants</h2>
+         {/** possible de passer des valeurs MAIS aussi des fonctions */}
             {/** data={article} => attribut de la balise */}
             {/** data={article} => props du composant */}
+        {articles.map((article , index) => {
+            return <Article key={index} data={article} augmenter={augmenter}/>
+           
         })}
     </div> );
 }
