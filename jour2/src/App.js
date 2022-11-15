@@ -8,6 +8,7 @@ import Exo3 from "./composants/Exo3";
 import Articles from "./composants/Articles";
 import Etudiants from "./composants/Etudiants";
 import StateBase from "./composants/StateBase";
+import StateReduce from "./composants/StateReduce";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Articles />
             <Etudiants />
             <StateBase />
+            <StateReduce />
           </div>
         </main> 
         

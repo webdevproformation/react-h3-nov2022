@@ -13,7 +13,7 @@ const StateBase = () => {
     } 
     return ( 
         <div className="col-3">
-            <h2>Découverte de useReducer</h2>
+            <h2>#1 - useReducer</h2>
             <button onClick={augmenter}>augmenter</button>
             <button onClick={diminuer} className="mx-2">diminuer</button>
             <button onClick={zero}>zero</button>
