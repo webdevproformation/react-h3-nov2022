@@ -16,6 +16,10 @@ ce composant retourne le jsx suivant :
 3 créer  le composant Boucle 
 dans ce composant stocker le tableau suivant 
 
+
+https://sharemycode.fr/zz8
+
+
 [
     
 ]
