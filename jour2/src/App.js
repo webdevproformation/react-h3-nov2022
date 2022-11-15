@@ -11,6 +11,7 @@ import StateBase from "./composants/StateBase";
 import StateReduce from "./composants/StateReduce";
 import Exo5 from "./composants/Exo5";
 import Effect1 from "./composants/Effect1";
+import Effect2 from "./composants/Effect2";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <StateReduce />
             <Exo5 />
             <Effect1 />
+            <Effect2 />
           </div>
         </main> 
         
