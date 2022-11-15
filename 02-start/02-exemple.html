@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function useState(nb){
+            
+            return [ nb  , (nb) => { return nb } ]
+
+        }
+
+        const tableau = useState(10)
+        console.log(tableau[0]);
+        console.log(tableau[1]);
+
+        const [nb , setNb] = useState(10)
+        // première manière
+        setNb(nb - 1)
+        // deuxième manière 
+        setNb((prevNb) => { return prevNb - 1 })
+        console.log(nb)
+
+    </script>
+</body>
+</html>
