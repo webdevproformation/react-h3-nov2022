@@ -1,0 +1,16 @@
+créer une composant Exo3 
+state contenant un profil user 
+{ 
+    id : 1
+    nom : "Alain",
+    isLogged : false 
+}
+render 
+bouton cliquer => modifier la valeur isLogged => true
+bouton recliquer => modifier la valeur isLogged => false 
+
+si la valeur isLogged = false 
+<p>veuillez vous connecter !</p>
+
+si la valeur isLogged = true
+<p>Bienvenu Alain !!!</p> 
