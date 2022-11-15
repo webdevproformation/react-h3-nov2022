@@ -23,12 +23,12 @@ const [ nb , dispatch  ] = useReducer( fonctionReductrice  , 0 )
 créer un composant Exo5 
 
 va utiliser useReducer 
-valeur initiale de notre state   {id : 1 , etudiant : "ALain" , note : 10},
+valeur initiale de notre state   {id : 1 , etudiant : "Alain" , note : 10},
 
 3 actions possibles sur ce state 
 bouton augmenter la note de l' étudiant de + 2
 bouton diminuer la note de l' étudiant de -3 
-bouton changer le nom de l'étudiant Alain => "Béatrice"
-        recliquer "Béatrice" => Alain
+bouton changer le nom de l'étudiant "Alain" => "Béatrice"
+        recliquer "Béatrice" => "Alain"
     
 
