@@ -11,6 +11,10 @@ function reduce(state , action){
     }
 }
 
+// sommaire demain :
+// formulaire 
+// useContext 
+// redux
 
 const Exo7 = () => {
     const [article, dispatch] = useReducer( reduce , {});
