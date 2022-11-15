@@ -1,0 +1,23 @@
+
+// hook qui permet de réaliser des actions 
+// modification de valeurs 
+// suite à une action // suite au cycle de vie du composant 
+// plusieurs etapes dans la vie d'un composant 
+// chargé => associer et chargé dans le DOM 
+// mounted
+
+// si jamais vous avez une modification dans le state // modification dans une props 
+// updated 
+
+// disparait du DOM => 
+//unmounted 
+
+// Effect => SideEffect => effet secondaire 
+
+useEffect( () => {} , facultatif )
+
+useEffect( () => {
+    // traitement ici 
+} ) // les traitements vont être exécuté autant de fois que j'ai d'update  
+
+

@@ -19,10 +19,10 @@ const Exo5 = () => {
 
     return ( <div className="col-3">
         <h2>Exo 5</h2>
+        <p>nom : {p.etudiant} - note : {p.note}</p>
         <button onClick={() => dispatch("AUGMENTER2")}>Augmenter + 2</button>
         <button onClick={() => dispatch("DIMINUER3")}>Diminuer -3</button>
         <button onClick={() => dispatch("CHANGERNOM")}>Changer nom</button>
-        <p>nom : {p.etudiant} - note : {p.note}</p>
     </div> );
 }
  
