@@ -11,10 +11,10 @@ const Exo1 = () => {
             {/** il faut obligatoirement avoir 1 balise parent comme racine du composant */}
             <h1>Exo 1</h1>
             <ul>
-                {articles.map(article  => {
+                { articles.map(article  => {
                     return (article.publie) && 
                             <li key={article.id}>{article.titre}</li>
-                })}
+                }) }
             </ul>
         </div>
      );

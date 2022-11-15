@@ -1,5 +1,6 @@
 import Exo1 from "./composants/Exo1";
 import Menu from "./composants/Menu";
+import Event from "./composants/Event";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <main className="container">
           <div className="row">
             <Exo1 />
+            <Event />
           </div>
         </main> 
         
