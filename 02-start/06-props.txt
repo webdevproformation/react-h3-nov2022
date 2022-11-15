@@ -1,0 +1,5 @@
+créer deux composants 
+
+Articles.jsx => composant parent => le composant qui va appeler des composants enfants
+
+Article.jsx => composant enfant => appelés par Articles 
