@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // shallow copy => copie en surface / copie légère
+
+        const a = {
+            id : 1 ,
+            distance : 20 ,
+            devise : "euros"
+        };
+
+        const b = a ; // variable b et stocker la valeur de a 
+        // intuitivement 
+        // const b = { id : 1 , distance : 20 ,devise : "euros" } 
+        // effective 
+        // const b = x011111 ; adresse mémoire 
+
+        console.log(b)
+        b.id = 60; // modifier l'id de b MAIS aussi l'id de a 
+        console.log(b); // { id: 60, distance: 20, devise: "euros" }
+        // MAIS 
+        console.log(a); // { id: 60, distance: 20, devise: "euros" }
+
+        const e = {
+            id : 3 ,
+            nom : "rose"
+        };
+
+        const f = { ...e } ;
+        
+        f.id = "bonjour";
+
+        console.log(e); // { id: 3, nom: "rose" }
+        console.log(f); // { id: "bonjour", nom: "rose" }
+
+
+        const g = {
+            nom : "Pierre" ,
+            adresse : {
+                rue : "30 rue de Marseille",
+                ville : "Paris"
+            }
+        }
+
+        const h = { ...g } ; // copy en surface legère
+        // h.adresse = { ...g.adresse } ;
+        h.nom = "Zorro"; 
+        h.adresse.rue = "60 rue de Lisbonne";
+
+        console.log(g) // { nom: "Pierre", adresse: {rue : "60 rue de Lisbonne" , ville : "Paris"} }
+        console.log(h) // { nom: "Zorro", adresse: {rue : "60 rue de Lisbonne" , ville : "Paris"} }
+
+        // _.cloneDeep() 
+        // https://github.com/lodash/lodash/blob/master/.internal/baseClone.js
+    </script>
+</body>
+</html>
