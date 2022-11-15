@@ -23,6 +23,7 @@ const State = () => {
         <div className="col-3 mt-3">
             <button className="btn btn-warning" onClick={augmenter}>Augmenter</button>
             <span className="badge bg-primary m-2">{nb}</span>
+            <button className="btn btn-danger" onClick={()=> setNb( nb -1 )}>Diminuer</button>
         </div>
      );
 }
