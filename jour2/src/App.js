@@ -3,6 +3,7 @@ import Menu from "./composants/Menu";
 import Event from "./composants/Event";
 import Exo2 from "./composants/Exo2";
 import State from "./composants/State";
+import State2 from "./composants/State2";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Event />
             <Exo2 />
             <State />
+            <State2 />
           </div>
         </main> 
         
