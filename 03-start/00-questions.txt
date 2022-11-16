@@ -44,3 +44,8 @@ installer plein de composant qui vont faciliter la création d'une navigation
 start le projet 
 npm start
 
+cas pratique :
+1 installer bootstrap 
+2 créer un dossier composants 
+3 dans ce dossier créer un composant Menu (barre de navigation)
+
