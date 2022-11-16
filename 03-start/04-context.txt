@@ -1,0 +1,21 @@
+vue comment faire communiquer une composant 
+
+Parent vers l'enfant => props 
+
+informations qui sont stockées dans le composant Login 
+
+mais qui vont avoir un impact sur des composants qui ne sont pas ses parents 
+
+cousin / arrière grand parents comme le Menu 
+
+Comment partager des informations qui n'ont pas de relation parent / enfant 
+
+state manager 
+- Redux ( vendredi => avant ) historiquement le plus ancien
+- React ( Contexte => maintenant ) => inclu dans React 
+- Pinia 
+- FluX
+
+// store 
+// action dispatch 
+
