@@ -1,2 +1,14 @@
 support de cours > chapitre 4 Plusieurs composants 
                  > section 4 React DevTool
+
+
+cas pratique 
+
+1 créer un nouveau context useAchat 
+
+2 dans ce contexte => par défaut panier qui sera un tableau vide  (et qui sera disponible sur tous les composants)
+
+3 dans le provider et créer une fonction qui permet d'ajouter un produit dans le panier 
+
+4 un produit {id : xxx , nom : xxxx , image : xxxx }
+
