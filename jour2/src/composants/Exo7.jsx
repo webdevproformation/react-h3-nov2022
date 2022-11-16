@@ -11,10 +11,16 @@ function reduce(state , action){
     }
 }
 
+// useState versus useReducer 
+// même chose 
+// simple           complexe 
+//  => valeur est simple et peu d'action 
+// useReducer => valeur complexe objet et / ou plein d'action 
+
 // sommaire demain :
 // formulaire 
 // useContext 
-// redux
+// reuseStatedux
 
 const Exo7 = () => {
     const [article, dispatch] = useReducer( reduce , {});

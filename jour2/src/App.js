@@ -14,6 +14,9 @@ import Effect1 from "./composants/Effect1";
 import Effect2 from "./composants/Effect2";
 import Exo6 from "./composants/Exo6";
 import Exo7 from "./composants/Exo7";
+import Logo from "./composants/Logo";
+
+
 
 function App() {
   return (
@@ -36,6 +39,7 @@ function App() {
             {/* <Effect2 /> */}
             <Exo6 />
             <Exo7/>
+            <Logo />
           </div>
         </main> 
         
