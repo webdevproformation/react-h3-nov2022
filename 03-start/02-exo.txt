@@ -1,0 +1,19 @@
+créer un nouveau composant Accueil 
+
+useState([])
+useEffect( () => {
+
+requête Ajax vers l'url suivant :
+
+www.thecocktaildb.com/api/json/v1/1/search.php?s=vodka
+
+}  , [])
+render 
+afficher les résultats dans la page d'accueil
+
+titre
+<div class="col-3">
+    <h2> strDrink </h2>
+    <img alt="" src="strDrinkThumb" class="img-fluid" />
+    <p>strInstructions</p>
+</div>
