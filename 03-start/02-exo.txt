@@ -13,3 +13,17 @@ titre
     <img alt="" src="strDrinkThumb" class="img-fluid" />
     <p>strInstructions</p>
 </div>
+
+cas pratique : 
+
+dans la page d'Accueil ajouter une pagination 
+
+si le résultat est > 8 
+ajoutez un composant pagination
+https://getbootstrap.com/docs/5.2/components/pagination/
+ le nombre de lien dans la pagination est dynamique 
+ par défaut vous être sur la page 1 => 
+ page 2 ... => afficher la suite des résultats 
+
+
+=> 
