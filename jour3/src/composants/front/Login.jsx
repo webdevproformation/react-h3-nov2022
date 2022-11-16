@@ -5,7 +5,7 @@ import { useNavigate} from "react-router-dom"
 const Login = () => {
     const loginRef = useRef()
     const passwordRef = useRef()
-    const { connexion } = useContext(UserContext);
+    const { connexion } = useContext( UserContext );
     const navigate = useNavigate()
 
     const soumissionForm = e => {
@@ -13,15 +13,14 @@ const Login = () => {
         /* const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries())
         console.log(data); */
-
         // équivalent 
         const data = {
             login : loginRef.current.value,
             password : passwordRef.current.value,
         } 
-       // console.log(data);
+
         if(connexion(data)){
-            navigate("/dashboard")
+            navigate("/dashboard") // redirection programmatique 
         }
     }
     return (

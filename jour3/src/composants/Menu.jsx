@@ -1,9 +1,18 @@
 import { Link , NavLink } from "react-router-dom"
 import { useContext } from "react";
 import { UserContext } from "../contexts/useContext" // télécharger le store 
+import { useNavigate } from "react-router-dom"
 
 const Menu = () => {
-    const { isLogged } = useContext(UserContext);
+    const { isLogged , deconnexion } = useContext(UserContext);
+    const navigate = useNavigate()
+    
+    const logout = e => {
+        e.preventDefault();
+        deconnexion()
+        navigate("/login"); 
+    }
+
     return ( 
         <div className="bg-dark">
             <nav className="container navbar navbar-expand navbar-dark">
@@ -29,7 +38,7 @@ const Menu = () => {
                         <>
                          <li className="nav-item">
                             <NavLink to="/" className={({ isActive }) =>
-                            isActive ? "nav-link active" : "nav-link"}>Déconnexion</NavLink>
+                            isActive ? "nav-link active" : "nav-link"} onClick={logout}>Déconnexion</NavLink>
                           </li>
                           <li className="nav-item">
                                 <NavLink to="/dashboard" className={({ isActive }) =>
