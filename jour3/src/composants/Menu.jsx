@@ -21,6 +21,12 @@ const Menu = () => {
                         isActive ? "nav-link active" : "nav-link"}>Contact</NavLink>
                     </li>
                 </ul>
+                <ul className="navbar-nav ms-auto">
+                    <li className="nav-item">
+                        <NavLink to="/login" className={({ isActive }) =>
+                        isActive ? "nav-link active" : "nav-link"}>Login</NavLink>
+                    </li>
+                </ul>
             </nav>
         </div>
      );

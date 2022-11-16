@@ -1,10 +1,12 @@
 Cas pratique 
 
-1 ajouter un nouvelle route qui associe l'url "login" avec une componsant Login
+1 ajouter un nouvelle route qui associe l'url "login" avec un componsant Login
+
+1 ajouter le lien dans la barre de menu
 
 2 créer un composant Login 
 
-dans la partie render un formulaire contenant 2 champs :
+dans la partie render, afficher un formulaire contenant 3 champs :
 login input de type texte 
 password input de type password 
 avec un bouton de soumission 

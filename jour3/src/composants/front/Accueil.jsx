@@ -6,7 +6,9 @@ const Accueil = () => {
     const [recherche, setRecherche] = useState(() => {
         return "vodka"
     })
-    const [pageEncours , setPageEnCours] = useState(1)
+    const [pageEncours , setPageEnCours] = useState(1);
+    const max = 4 ;
+
     useEffect( () => {
         async function getCocktails() {
             const reponse = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+recherche);
@@ -36,11 +38,11 @@ const Accueil = () => {
         </div>
         <hr />
         <div className="d-flex justify-content-center my-3">
-            <Pagination total={(cocktails && cocktails.length > 0) ? cocktails.length : 0} max="8" pageEncours={pageEncours} setPageEnCours={setPageEnCours} />
+            <Pagination total={(cocktails && cocktails.length > 0) ? cocktails.length : 0} max={max} pageEncours={pageEncours} setPageEnCours={setPageEnCours} />
         </div>
         <div className="row">
             { (cocktails && cocktails.length > 0) ? 
-                 cocktails.slice((pageEncours - 1 ) * 8 , 8 * pageEncours ).map( cocktail  => {
+                 cocktails.slice((pageEncours - 1 ) * max , max * pageEncours ).map( cocktail  => {
                     return <div className="col-3" key={cocktail.idDrink}>
                         <h2>{cocktail.strDrink}</h2>
                         <img src={cocktail.strDrinkThumb} alt="" className="img-fluid" />
@@ -51,7 +53,7 @@ const Accueil = () => {
             }
         </div>
         <div className="d-flex justify-content-center my-3">
-            <Pagination total={(cocktails && cocktails.length > 0) ? cocktails.length : 0} max="8" pageEncours={pageEncours} setPageEnCours={setPageEnCours} />
+            <Pagination total={(cocktails && cocktails.length > 0) ? cocktails.length : 0} max={max} pageEncours={pageEncours} setPageEnCours={setPageEnCours} />
         </div>
     </div> );
 }
