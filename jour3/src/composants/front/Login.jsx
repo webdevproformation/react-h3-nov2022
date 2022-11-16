@@ -1,8 +1,10 @@
-import { useRef } from "react"
+import { useRef , useContext } from "react"
+import { UserContext  } from "../../contexts/useContext";
 // useRef => équivalent d'un document.querySelector()
 const Login = () => {
     const loginRef = useRef()
     const passwordRef = useRef()
+    const { connexion } = useContext(UserContext);
 
     const soumissionForm = e => {
         e.preventDefault() ; // bloquer le chargement automatique de la page suite à la soumission 
@@ -15,7 +17,8 @@ const Login = () => {
             login : loginRef.current.value,
             password : passwordRef.current.value,
         } 
-        console.log(data);
+       // console.log(data);
+        connexion(data.login , data.password);
     }
     return (
         <div>
