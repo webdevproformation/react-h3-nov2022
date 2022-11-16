@@ -2,6 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./composants/Menu";
 import { Routes , Route  } from "react-router-dom"
+import Accueil from "./composants/front/Accueil";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Menu />
       <div className="container">
         <Routes>
-          <Route path="/" element={<h1>bienvenu !!!</h1>} />
+          <Route path="/" element={<Accueil />} />
           <Route path="/test" element={<h1>une page de test</h1>} />
           <Route path="/contact" element={<h1>page contact</h1>} />
           <Route path="/a-propos" element={<h1> A propos</h1>} />
