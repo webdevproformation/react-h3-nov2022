@@ -1,0 +1,15 @@
+Cas pratique 
+
+1 ajouter un nouvelle route qui associe l'url "login" avec une componsant Login
+
+2 créer un composant Login 
+
+dans la partie render un formulaire contenant 2 champs :
+login input de type texte 
+password input de type password 
+avec un bouton de soumission 
+
+utilisez bootstrap pour la mise en forme du formulaire 
+
+
+
