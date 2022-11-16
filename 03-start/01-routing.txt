@@ -1,0 +1,25 @@
+
+
+<BrowserRouter> lien entre url page et votre application
+    <App />
+</BrowserRouter>
+
+
+App.js
+
+import Accueil from "./composants/Accueil"
+
+<Routes>
+    <Route path="/" element={Accueil}> 
+    <Route path="/contact" element={Contact}> 
+    <Route path="/article/:id" element={Article}> 
+    <Route path="/coucou" element={<h1>coucou</h1>}> 
+    <Route path="*" element={NotFound}> 
+</Routes>
+
+
+ <a href="/" className="nav-link">Accueil</a>
+
+ <Link to="/" className="nav-link">Accueil</Link>
+
+ index.js
