@@ -2,7 +2,7 @@ import { useRef , useContext } from "react"
 import { UserContext  } from "../../contexts/useContext";
 import { useNavigate} from "react-router-dom"
 // useRef => équivalent d'un document.querySelector()
-const Login = () => {
+export const Login = () => {
     const loginRef = useRef()
     const passwordRef = useRef()
     const { connexion } = useContext( UserContext );
@@ -40,4 +40,3 @@ const Login = () => {
       );
 }
  
-export default Login;

@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./composants/Menu";
 import { Routes , Route  } from "react-router-dom"
 import Accueil from "./composants/front/Accueil";
-import Login from "./composants/front/Login";
+import {Login} from "./composants/front/Login";
 import Contact from "./composants/front/Contact";
 
 function App() {
