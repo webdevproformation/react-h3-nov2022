@@ -8,7 +8,8 @@ export const AchatProvider = (props) => {
         const existe = clonePanier.find((p) => { return p.id === produit.id })
         if(!existe){
             clonePanier.push(produit);
-            setPanier(clonePanier)
+            console.log(clonePanier);
+             setPanier(clonePanier)
         }
     }
     return <AchatContext.Provider value={{panier , addPanier}}>
