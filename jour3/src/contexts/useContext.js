@@ -11,12 +11,14 @@ export const UserContextProvider = (props) => {
             isLogged : false
     });
 
-    const connexion = (login , password) => {
+    const connexion = ({login , password}) => {
+        
         if(login === profil.login && password === profil.password){
             setProfil({...profil , isLogged : true})
-            return
+            return true ;
         }   
-        console.log("erreur lors de l'authentification")
+        return false ;
+        // console.log("erreur lors de l'authentification")
     }
 
     return (

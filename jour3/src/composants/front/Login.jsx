@@ -1,10 +1,12 @@
 import { useRef , useContext } from "react"
 import { UserContext  } from "../../contexts/useContext";
+import { useNavigate} from "react-router-dom"
 // useRef => équivalent d'un document.querySelector()
 const Login = () => {
     const loginRef = useRef()
     const passwordRef = useRef()
     const { connexion } = useContext(UserContext);
+    const navigate = useNavigate()
 
     const soumissionForm = e => {
         e.preventDefault() ; // bloquer le chargement automatique de la page suite à la soumission 
@@ -18,7 +20,9 @@ const Login = () => {
             password : passwordRef.current.value,
         } 
        // console.log(data);
-        connexion(data.login , data.password);
+        if(connexion(data)){
+            navigate("/dashboard")
+        }
     }
     return (
         <div>
