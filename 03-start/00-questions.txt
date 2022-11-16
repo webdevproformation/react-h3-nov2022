@@ -1,0 +1,46 @@
+https://sharemycode.fr/zz8
+
+support de cours :
+url : https://formation.webdevpro.net/react/
+login : react 
+password : fb 
+
+
+note de cours :
+https://github.com/webdevproformation/react-h3-nov2022
+
+résumé hier : 
+
+useState()
+useEffect()
+useReducer()
+communiquer des composants Parent <=> Enfant props
+requête Ajax avec fetch et useEffect(() => {} , [])
+
+cd ..
+npx create-react-app jour3
+
+=> routing 
+
+projet plusieurs url 
+
+http://localhost:3000/ => page d'accueil (composant Accueil)
+http://localhost:3000/contact => page formulaire (Contact)
+http://localhost:3000/articles => liste des articles
+http://localhost:3000/articles/1 => liste des articles
+
+associer url =====> Composant => routing / par défaut fonctionnalité non disponible 
+
+cd jour3 
+
+npm install react-router-dom 
+=> https://reactrouter.com/ => le site officiel avec la documentation officiel 
+
+
+installer plein de composant qui vont faciliter la création d'une navigation 
+
+// rappel un peu une autre librairie "express" nodejs directement 
+
+start le projet 
+npm start
+
