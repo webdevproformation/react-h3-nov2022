@@ -26,4 +26,7 @@ https://getbootstrap.com/docs/5.2/components/pagination/
  page 2 ... => afficher la suite des résultats 
 
 
+ajouter la librairie Lodash => apporter des fonctions pour pouvoir manipuler facilement des tableaux 
+npm i lodash
+
 => 
