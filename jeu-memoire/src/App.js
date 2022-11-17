@@ -20,15 +20,42 @@ function initGame(){
 function App() {
 
   const [jeuComplet, setJeuComplet ] = useState([]);
+  const [choix1 , setChoix1] = useState(null)
+  const [choix2 , setChoix2] = useState(null)
 
   useEffect( () => {
     setJeuComplet(initGame())
   }, [])
 
-  // créer un tableau qui contient 2 fois chaque image et que les images soient classées dans un ordre aléatoire
+  useEffect( () =>{
+    if(choix1 && choix2){
+      // vérification => comparaison entre l'image choix1 et du choix2
+      // si c'est différent => retourne les cartes 
+      if( choix1.img !== choix2.img ){
+        const cloneJeu = [...jeuComplet];
+        const AModifier1 = jeuComplet.find((c) => c.id === choix1.id)
+        const index1 = cloneJeu.indexOf(AModifier1);
+        const AModifier2 = jeuComplet.find((c) => c.id === choix2.id)
+        const index2 = cloneJeu.indexOf(AModifier2);
+        setTimeout( () => {
+          cloneJeu[index1].clique = false
+          cloneJeu[index2].clique = false
+          setJeuComplet(cloneJeu);
+        } ,  1000)
+      }
+      setChoix1(null);
+      setChoix2(null);
+    }
+  } , [choix1, choix2]) 
 
+  // créer un tableau qui contient 2 fois chaque image et que les images soient classées dans un ordre aléatoire
   
   const handleClick = (carte) => {
+    if( choix1 === null ) {
+      setChoix1(carte)
+    }  else{
+      setChoix2(carte);
+    }
     const cloneJeu = [...jeuComplet];
     const AModifier = jeuComplet.find((c) => c.id === carte.id)
     const index = cloneJeu.indexOf(AModifier);
