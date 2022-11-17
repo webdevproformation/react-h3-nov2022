@@ -47,3 +47,24 @@ article{
   transform: rotateY(180deg);
 }
 
+.text-center{
+  text-align: center;
+}
+
+button{
+  margin: 20px 0;
+  border:2px solid red;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all .7s;
+}
+
+button:hover{
+  background: red;
+  color : white;
+}
+
+
+

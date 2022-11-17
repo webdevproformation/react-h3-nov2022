@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import "./App.css";
+import Carte from "./Carte";
 
 function initGame(){
   const cartes = [
@@ -22,6 +23,8 @@ function App() {
   const [jeuComplet, setJeuComplet ] = useState([]);
   const [choix1 , setChoix1] = useState(null)
   const [choix2 , setChoix2] = useState(null)
+  const [score , setScore] = useState(0);
+  const [disable , setDisable] = useState(false);
 
   useEffect( () => {
     setJeuComplet(initGame())
@@ -41,10 +44,16 @@ function App() {
           cloneJeu[index1].clique = false
           cloneJeu[index2].clique = false
           setJeuComplet(cloneJeu);
+          
         } ,  1000)
-      }
-      setChoix1(null);
-      setChoix2(null);
+      } 
+      setTimeout( () => {
+        setDisable(false);
+        setScore( score + 1 )
+        setChoix1(null);
+        setChoix2(null);
+      } , 1000)
+      
     }
   } , [choix1, choix2]) 
 
@@ -55,6 +64,7 @@ function App() {
       setChoix1(carte)
     }  else{
       setChoix2(carte);
+      setDisable(true); 
     }
     const cloneJeu = [...jeuComplet];
     const AModifier = jeuComplet.find((c) => c.id === carte.id)
@@ -62,19 +72,28 @@ function App() {
     cloneJeu[index].clique = true
     setJeuComplet(cloneJeu);
   }
+
+  const reset = () => {
+    setScore(0)
+    setChoix1(null);
+    setChoix2(null);
+    setJeuComplet(initGame())
+    setDisable(false); 
+  }
                 
   return (
+    <>
+    <h1 className="text-center">Jeu de mémoire</h1>  
+    <p className="text-center">règles du jeu : réaliser des pairs avec l'ensemble des cartes ci dessous</p>
+    <div className="text-center">
+      <button onClick={reset}>relancer une partie</button>
+    </div>  
     <div className="App">
-        { jeuComplet.map( (carte) => <div className={carte.clique ? "carte actif" : "carte"} key={carte.id} onClick={ () => handleClick( carte ) }>
-            <article>
-              <div className="carte-recto">
-                
-              </div>
-             <div className="carte-verso">{carte.img}</div>
-            </article> 
-          </div>
+        { jeuComplet.map( (carte) => <Carte  handleClick={handleClick} carte={carte} key={carte.id} disable={disable}/>
          ) }
     </div>
+      <p className="text-center">score : {score} </p>
+    </>
   );
 }
 

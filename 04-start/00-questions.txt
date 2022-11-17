@@ -13,7 +13,8 @@ pouvez vous mettre en place un score
 
 Cas numéro 1
 => suite au choix de 2 cartes augmenter le score de + 1
-(que les cartes soient identiques ou différentes)
+(que les cartes soient identiques ou différentes
+)
 
 ---------
 
