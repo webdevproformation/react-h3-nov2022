@@ -93,7 +93,7 @@ function App() {
         { jeuComplet.map( (carte) => <Carte  handleClick={handleClick} carte={carte} key={carte.id} disable={disable}/>
          ) }
     </div>
-      <Score score={score} jeuComplet={jeuComplet} />
+      <Score score={score} jeuComplet={jeuComplet} reset={reset} />
     </>
   );
 }

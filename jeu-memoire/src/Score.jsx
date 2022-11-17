@@ -1,13 +1,17 @@
-import { useRef} from "react";
+import { useRef , useState } from "react";
 
-const Score = ({score , jeuComplet}) => {
+const Score = ({score , jeuComplet , reset}) => {
     const nomRef = useRef();
+    const btnRef = useRef();
+    const [restart , setRestart] = useState(false)
 
     const isFinished = () =>{
         return jeuComplet.filter( carte => carte.clique ).length === jeuComplet.length
     }
 
     const enregistrerScore = () => {
+        if(restart) reset();
+
         const optionsFetch = {
             method: "POST",
             body: JSON.stringify({
@@ -18,7 +22,10 @@ const Score = ({score , jeuComplet}) => {
             headers: {"Content-type": "application/json; charset=UTF-8"}
         }
         fetch("http://localhost:3004/scores" , optionsFetch).then(reponse => reponse.json())
-        .then(console.log)
+        .then(() => {
+            btnRef.current.innerHTML = "Votre score est enregistré en Bdd - relancer une partie ?";
+            setRestart(true);
+        })
         .catch((e) => console.log(e))
     }
 
@@ -27,7 +34,7 @@ const Score = ({score , jeuComplet}) => {
        {isFinished() && 
         <>
             <input type="text" ref={nomRef}  placeholder="saisir votre nom"/>
-            <button onClick={enregistrerScore}>Enregistrer le score</button>
+            <button onClick={enregistrerScore} ref={btnRef}>Enregistrer le score</button>
         </>
        }
       </p>
