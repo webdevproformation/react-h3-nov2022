@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect , useState } from "react";
 import "./App.css";
 import Carte from "./Carte";
+import Score from "./Score";
 
 function initGame(){
   const cartes = [
@@ -25,6 +25,7 @@ function App() {
   const [choix2 , setChoix2] = useState(null)
   const [score , setScore] = useState(0);
   const [disable , setDisable] = useState(false);
+
 
   useEffect( () => {
     setJeuComplet(initGame())
@@ -92,7 +93,7 @@ function App() {
         { jeuComplet.map( (carte) => <Carte  handleClick={handleClick} carte={carte} key={carte.id} disable={disable}/>
          ) }
     </div>
-      <p className="text-center">score : {score} </p>
+      <Score score={score} jeuComplet={jeuComplet} />
     </>
   );
 }

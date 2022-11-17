@@ -1,0 +1,27 @@
+{
+  "scores": [
+    {
+      "score": 13,
+      "nom": "Malik",
+      "id": 1
+    },
+    {
+      "score": 12,
+      "nom": "Malik 2",
+      "date": 1668699679896,
+      "id": 2
+    },
+    {
+      "score": 8,
+      "nom": "Malik 3",
+      "date": 1668699880865,
+      "id": 3
+    },
+    {
+      "score": 6,
+      "nom": "H3 Hitema",
+      "date": 1668699952745,
+      "id": 4
+    }
+  ]
+}

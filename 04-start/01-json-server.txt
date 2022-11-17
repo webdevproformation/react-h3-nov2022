@@ -1,0 +1,10 @@
+installation du binaire
+npm -g i json-server
+
+créer un dossier jeu-bdd 
+créer un fichier db.json 
+
+lancer ma base de données 
+cd jeu-bdd
+
+json-server --watch db.json --port 3004
