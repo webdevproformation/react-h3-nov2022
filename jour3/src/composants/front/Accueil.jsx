@@ -1,9 +1,9 @@
 import { useEffect , useState , useContext } from "react";
 import Pagination from "../Pagination";
-import {AchatContext} from "../../contexts/useAchat"
+import { AchatContext2 } from "../../contexts/useAchat2"
 
 const Accueil = () => {
-    const { addPanier } = useContext( AchatContext );
+    const { dispatch } = useContext( AchatContext2 );
     const [cocktails, setCocktails] = useState([])
     const [recherche, setRecherche] = useState(() => {
         return "vodka"
@@ -50,11 +50,11 @@ const Accueil = () => {
                         <img src={cocktail.strDrinkThumb} alt="" className="img-fluid" />
                         <p>{cocktail.strInstructions}</p>
                         <button className="btn btn-sm btn-dark" onClick={ () => {
-                            addPanier({
+                            dispatch({type : "ADD_PANIER" , payload : {
                                 id : cocktail.idDrink ,
                                 nom : cocktail.strDrink ,
                                 img : cocktail.strDrinkThumb
-                            })
+                            }})
                         }}>ajouter au panier</button>
                     </div>
                 }  )  : 

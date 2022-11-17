@@ -1,0 +1,49 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App{
+  display: grid;
+  grid-template-columns: repeat( 4, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap:20px;
+}
+
+.carte{
+ perspective: 1000px;
+ background-color: transparent;
+}
+
+article{
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.carte.actif article{
+ transform: rotateY(180deg);
+}
+
+.carte-recto , .carte-verso{
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 150px;
+  height: 150px;
+  border:2px solid black;
+  border-radius: 5px;
+  background: red;
+}
+
+.carte-verso{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  background: white;
+  transform: rotateY(180deg);
+}
+
