@@ -28,7 +28,6 @@ const Menu = () => {
                         </li> : <li className="nav-item">
                             <NavLink to="#" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={ logout }>Logout</NavLink>
                         </li> }
-                        
                     </ul>
                </nav> 
         </div>

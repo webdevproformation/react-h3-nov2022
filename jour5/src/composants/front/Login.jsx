@@ -6,15 +6,14 @@ const Login = () => {
     const loginRef = useRef()
     const passwordRef = useRef()
     const dispatch = useDispatch()
+
     const soumission = (e) => {
         e.preventDefault()
         const credientials = {
             login : loginRef.current.value ,
             password : passwordRef.current.value
         }
-        dispatch(connexion(credientials))
-
-       //  console.log(credientials);
+        dispatch(connexion(credientials));
     }
     return ( 
         <>
