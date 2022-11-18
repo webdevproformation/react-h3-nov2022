@@ -31,3 +31,11 @@ permettre de pouvoir visualiser (le store) dans une extension dans le navigateur
 créer un nouveau lien dans la barre de menu redux => /redux
 
 index.js => ajouter pas mal d'import 
+
+
+Cas pratique 
+1 Ajouter une nouvelle fonction réductrice qui permet de récupérer tous les commentaires de l'API suivante  : https://jsonplaceholder.typicode.com/comments
+
+2 les sttocker dans le store généré par Redux 
+
+3 créer une action qui permet d'afficher tous les commentaires dans le Composant Redux 
