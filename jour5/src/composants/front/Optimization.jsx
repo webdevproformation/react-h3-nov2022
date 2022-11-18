@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Exo2 from "./Exo2";
 import LigneTableau from "./LigneTableau";
 
 const Optimization = ({produits}) => {
@@ -24,6 +25,8 @@ const Optimization = ({produits}) => {
                     
                 </tbody>
             </table>
+            <hr />
+            <Exo2 />
         </>
      );
 }

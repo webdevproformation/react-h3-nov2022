@@ -14,3 +14,18 @@ créer un nouveau composant dans le projet jour5
     faire en sorte que la fonction qui permet de remplir le p ne soit exécutée QUE si la valeur de connexion est modifiée 
     si le champ select est modifié => ça ne doit pas regénérer le contenu du p 
 
+---------------------
+
+Créer deux composants Exo2 / Exo2Enfant
+
+Exo2 
+    bouton => afficher masquer des éléments l'Enfant 
+    
+Exo2Enfant 
+    p un peu de texte
+
+Faire en sorte que si on clique sur le bouton dans Exo2 une fois masquer l'enfant SANS le rerender
+par contre si je clique sur le bouton à nouveau => rerendre 
+
+
+
