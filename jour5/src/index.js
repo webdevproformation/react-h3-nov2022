@@ -11,13 +11,15 @@ import {composeWithDevTools} from "redux-devtools-extension"
 import thunk from "redux-thunk"
 import reducer from "./reducer/index"
 import {getArticles} from "./action/article-action"
+import { getAllCommentaires } from './action/commentaire-action';
 
 
 const store = createStore(
   reducer , composeWithDevTools(applyMiddleware(thunk))
 )
 
-// store.dispatch(getArticles());
+store.dispatch(getArticles());
+store.dispatch(getAllCommentaires())
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

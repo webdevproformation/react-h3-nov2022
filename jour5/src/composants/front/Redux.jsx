@@ -1,14 +1,14 @@
 import { useSelector , useDispatch } from "react-redux";
 import { useEffect } from "react"
-import {getArticles} from "../../action/article-action";
+import { getArticles } from "../../action/article-action";
 
 const Redux = () => {
-    
-    const dispatch = useDispatch()
+
+    /* const dispatch = useDispatch()
 
     useEffect( () => {
         dispatch(getArticles())
-    } , [])
+    } , []) */
 
 
     const articles = useSelector( (store) =>   {
