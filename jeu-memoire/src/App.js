@@ -1,37 +1,33 @@
-import { useEffect , useState } from "react";
+import { useEffect , useReducer } from "react";
 import "./App.css";
 import Carte from "./Carte";
 import Score from "./Score";
+import {initGame , useInit} from "./hooks/useInit"
 
-function initGame(){
-  const cartes = [
-    { img : "🚲" , clique: false},
-    { img : "🚀", clique: false} , 
-    { img : "⛱️", clique: false} ,
-    { img  : "🚕", clique: false}
-  ];
-  const jeuComplet = [...cartes , ...cartes]
-                      // tri aléatoire d'un tableau
-                      .sort(() => Math.random() - 0.5 ) 
-                      // ajouter que chaque élément du tableau un id unique
-                      .map( (carte) => ({ img : carte.img , id : Math.random()  }) )
-  return jeuComplet ;
+function reductrice(state, action){
+
+  switch(action.type){
+    case "CHOIX1" :
+      return {...state , choix1 : action.payload }
+    case "CHOIX2" :
+        return {...state , choix2 : action.payload , disable : true }
+    case "SCORE+1" :
+      return {...state , choix1 : null , choix2 : null , disable : false , score : state.score + 1 }
+    case "RESET" :
+      return { choix1 : null , choix2 : null , score : 0 , disable : false }
+    default :
+      return state
+  }
 }
 
 function App() {
 
-  const [jeuComplet, setJeuComplet ] = useState([]);
-  const [choix1 , setChoix1] = useState(null)
-  const [choix2 , setChoix2] = useState(null)
-  const [score , setScore] = useState(0);
-  const [disable , setDisable] = useState(false);
+  const [jeuComplet , setJeuComplet ] = useInit();
 
-
-  useEffect( () => {
-    setJeuComplet(initGame())
-  }, [])
+  const [state , dispatch] = useReducer ( reductrice , { choix1 : null , choix2 : null , score : 0 , disable : false } )
 
   useEffect( () =>{
+    const {choix1, choix2} = state
     if(choix1 && choix2){
       // vérification => comparaison entre l'image choix1 et du choix2
       // si c'est différent => retourne les cartes 
@@ -44,28 +40,24 @@ function App() {
         setTimeout( () => {
           cloneJeu[index1].clique = false
           cloneJeu[index2].clique = false
-          setJeuComplet(cloneJeu);
+          setJeuComplet(() => cloneJeu);
           
         } ,  1000)
       } 
       setTimeout( () => {
-        setDisable(false);
-        setScore( score + 1 )
-        setChoix1(null);
-        setChoix2(null);
+        dispatch({type : "SCORE+1" })
       } , 1000)
-      
     }
-  } , [choix1, choix2]) 
+  } ) 
 
   // créer un tableau qui contient 2 fois chaque image et que les images soient classées dans un ordre aléatoire
   
   const handleClick = (carte) => {
+    const { choix1 } = state
     if( choix1 === null ) {
-      setChoix1(carte)
+      dispatch({type : "CHOIX1" , payload : carte})
     }  else{
-      setChoix2(carte);
-      setDisable(true); 
+      dispatch({type : "CHOIX2" , payload : carte})
     }
     const cloneJeu = [...jeuComplet];
     const AModifier = jeuComplet.find((c) => c.id === carte.id)
@@ -75,11 +67,8 @@ function App() {
   }
 
   const reset = () => {
-    setScore(0)
-    setChoix1(null);
-    setChoix2(null);
     setJeuComplet(initGame())
-    setDisable(false); 
+    dispatch({type : "RESET"})
   }
                 
   return (
@@ -90,10 +79,10 @@ function App() {
       <button onClick={reset}>relancer une partie</button>
     </div>  
     <div className="App">
-        { jeuComplet.map( (carte) => <Carte  handleClick={handleClick} carte={carte} key={carte.id} disable={disable}/>
+        { jeuComplet.map( (carte) => <Carte  handleClick={handleClick} carte={carte} key={carte.id} disable={state.disable}/>
          ) }
     </div>
-      <Score score={score} jeuComplet={jeuComplet} reset={reset} />
+      <Score score={state.score} jeuComplet={jeuComplet} reset={reset} />
     </>
   );
 }
