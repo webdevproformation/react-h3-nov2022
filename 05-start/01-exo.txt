@@ -1,0 +1,17 @@
+créer un nouveau composant dans le projet jour5 
+=> il s'appelle Exo1 
+
+    menu déroulant <select> </select> qui contient 2 valeurs 
+        users 
+        posts
+
+    bouton => connexion  => true / false
+
+    p => si la connexion est true => bienvenu dans le back office
+    p => si la connexion est false => veuillez vous connecter
+
+    les valeurs stockées dans champs sont gérées dans un state dédié 
+
+    faire en sorte que la fonction qui permet de remplir le p ne soit exécutée QUE si la valeur de connexion est modifiée 
+    si le champ select est modifié => ça ne doit pas regénérer le contenu du p 
+
