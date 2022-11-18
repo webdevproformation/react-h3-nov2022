@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const calendrier = [
+             [],
+            [],
+            [],
+            [],
+            [],
+            [],
+        ];
+        const aujourdhui = new Date();
+        const premierJourDuMois = new Date( aujourdhui.getFullYear(), aujourdhui.getMonth() -1 , 1 ).getDay() 
+        const nombreJourDuMois = new Date( aujourdhui.getFullYear(), aujourdhui.getMonth()  , 0 ).getDate()
+        console.log(premierJourDuMois ,nombreJourDuMois );
+
+        let compteur = 1;
+        for(let s = 0 ; s <= 6 ; s++){
+            calendrier.push([]) 
+            for(let j = 0 ; j < 7; j++){
+                calendrier[s].push(compteur) ;
+                compteur++ ;
+            }
+        }
+        
+        console.log(calendrier);
+
+    </script>
+</body>
+</html>
