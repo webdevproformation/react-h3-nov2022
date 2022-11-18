@@ -8,3 +8,16 @@ password : fb
 
 note de cours :
 https://github.com/webdevproformation/react-h3-nov2022
+
+créer un nouveau projet => 
+
+npx create-react-app jour5
+
+cd jour5 
+npm i bootstrap react-router-dom 
+
+créer une barre de Menu qui contient 2 liens 
+lien vers l'accueil  => /
+lien vers optimisation  => /optimisation
+
+
