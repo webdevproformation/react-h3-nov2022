@@ -6,14 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router  } from "react-router-dom"
 
 import { Provider } from "react-redux"
+import { configureStore } from "@reduxjs/toolkit"
 import { createStore, applyMiddleware } from "redux"
 import {composeWithDevTools} from "redux-devtools-extension"
 import thunk from "redux-thunk"
 import reducer from "./reducer/index"
 import {getArticles} from "./action/article-action"
 
+
 const store = createStore(
-   reducer , composeWithDevTools(applyMiddleware(thunk))
+  reducer , composeWithDevTools(applyMiddleware(thunk))
 )
 
 store.dispatch(getArticles());
