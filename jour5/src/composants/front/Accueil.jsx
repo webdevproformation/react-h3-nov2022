@@ -1,4 +1,5 @@
 import {useState , useMemo} from "react"
+import Exo1 from "./Exo1";
 
 const Accueil = () => {
     const [recherche, setRecherche] = useState("");
@@ -32,6 +33,8 @@ const Accueil = () => {
                 </label>
             </div>
             {  genererArticlesMemo }
+            <hr />
+            <Exo1 />
         </>
      );
 }

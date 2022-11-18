@@ -1,6 +1,5 @@
 créer un nouveau composant dans le projet jour5 
 => il s'appelle Exo1 
-
     menu déroulant <select> </select> qui contient 2 valeurs 
         users 
         posts
