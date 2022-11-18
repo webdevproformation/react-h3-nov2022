@@ -12,6 +12,9 @@ const Menu = () => {
                         <li className="nav-item">
                             <NavLink to="/optimisation" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Optimisation</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink to="/redux" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Redux</NavLink>
+                        </li>
                     </ul>
                </nav> 
         </div>

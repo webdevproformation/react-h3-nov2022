@@ -3,6 +3,7 @@ import Menu from "./composants/Menu";
 import {Routes , Route} from "react-router-dom"
 import Accueil from "./composants/front/Accueil";
 import Optimization from "./composants/front/Optimization";
+import Redux from "./composants/front/Redux";
 
 function App() {
   const produits = [
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/optimisation" element={<Optimization produits={produits} />} />
+            <Route path="/redux" element={<Redux />} />
           </Routes>
         </div>
     </div>

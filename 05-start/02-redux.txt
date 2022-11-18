@@ -1,0 +1,32 @@
+Redux 
+
+=> $_SESSION 
+
+créer une variable globale dans lequelle on va pouvoir stocker 
+
+valeurs et des traitements que l'on va pouvoir utiliser sur n'importe quelle composant quelque soit sa position dans l'arborescence du 
+
+=> useReducer()
+=> createContext() / useContext()
+
+=> Redux etait le moyen principal pour partager des données / méthodes entre les composants AVANT createContext() / useContext()
+
+=> pour utiliser Redux il faut installer les librairies suivantes 
+
+=> dans le support de cours 
+=> chapitre 11 
+=> section 5 Set up Redux 
+
+
+npm install redux react-redux redux-thunk redux-devtools-extension 
+
+redux => le state Manager => React mais il est possible de l'utiliser sur Vue / Angular / Svelte 
+
+react-redux => facilement utiliser redux dans un projet react 
+
+redux-thunk redux-devtools-extension
+
+permettre de pouvoir visualiser (le store) dans une extension dans le navigateur ReduxDev Tool 
+
+créer un nouveau lien dans la barre de menu redux => /redux
+
