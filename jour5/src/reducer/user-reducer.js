@@ -1,4 +1,4 @@
-import { CONNEXION , DECONNEXION } from "../action/user-action"
+import { CONNEXION , DECONNEXION , IS_LOGGED } from "../action/user-action"
 
 const initialState = {id : 1 , login : "Alain", password : "azerty", isLogged : false  }
 
@@ -9,6 +9,8 @@ export default function userReducer(state = initialState , action){
                 return { ...state , isLogged : true }
             }
             return state
+        case IS_LOGGED : 
+            return state ;
         case DECONNEXION :
             return {...state , isLogged : false }
         default :

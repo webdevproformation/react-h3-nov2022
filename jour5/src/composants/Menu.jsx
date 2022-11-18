@@ -1,14 +1,18 @@
 import {NavLink} from "react-router-dom" ;
 import { useSelector , useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom"
 
 const Menu = () => {
     const user = useSelector( (store) => store.userReducer );
     const dispatch = useDispatch()
+    const navigate = useNavigate();
 
     const logout = (e) => {
         e.preventDefault();
         dispatch({type : "DECONNEXION" })
+        navigate("/login");
     }
+
     return ( 
         <div className="bg-warning">
                <nav className="navbar navbar-expand navbar-light container">
