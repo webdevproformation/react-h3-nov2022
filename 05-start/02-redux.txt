@@ -39,3 +39,22 @@ Cas pratique
 2 les stocker dans le store généré par Redux 
 
 3 créer une action qui permet d'afficher tous les commentaires dans le Composant Redux 
+
+
+1
+modifier le state par défaut de l'utilisateur  lui donner les valeurs suivantes
+{id : 1 , login : "Alain", password : "azerty", isLogged : false  }
+
+2
+créer deux actions pour le profil utilisateur 
+CONNEXION
+DECONNEXION 
+
+3
+=> CONNEXION  modifier isLogged : false  => true 
+=> DECONNEXION modifier isLogged : true  => false 
+
+3
+=> composant Login => formulaire avec 2 champs 
+
+
