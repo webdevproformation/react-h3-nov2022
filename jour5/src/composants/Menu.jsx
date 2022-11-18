@@ -1,6 +1,14 @@
 import {NavLink} from "react-router-dom" ;
+import { useSelector , useDispatch } from "react-redux";
 
 const Menu = () => {
+    const user = useSelector( (store) => store.userReducer );
+    const dispatch = useDispatch()
+
+    const logout = (e) => {
+        e.preventDefault();
+        dispatch({type : "DECONNEXION" })
+    }
     return ( 
         <div className="bg-warning">
                <nav className="navbar navbar-expand navbar-light container">
@@ -15,6 +23,12 @@ const Menu = () => {
                         <li className="nav-item">
                             <NavLink to="/redux" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Redux</NavLink>
                         </li>
+                        { !user.isLogged ? <li className="nav-item">
+                            <NavLink to="/login" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Login</NavLink>
+                        </li> : <li className="nav-item">
+                            <NavLink to="#" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} onClick={ logout }>Logout</NavLink>
+                        </li> }
+                        
                     </ul>
                </nav> 
         </div>
