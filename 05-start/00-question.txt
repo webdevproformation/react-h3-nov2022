@@ -21,3 +21,28 @@ lien vers l'accueil  => /
 lien vers optimisation  => /optimisation
 
 
+
+useState
+useEffect 
+useContext 
+useReducer 
+useRef 
+
+useMemo => hook qui permet de réaliser de l'OPTIMISATION dans le rendu des composants 
+
+const [nb , setNb] = useState(0)
+
+setNb(nb + 1) ; => tout le composant / tout le code qu'il contient va être rééexcuté 
+
+// il est possible de conditionner l'exécution du callback en fonction des valeurs mise dans le deuxième paramètre = tableau des dépendances
+// exécuter quelque chose suite à la modification 
+useEffect( () => {} ,  []) ;
+useEffect( () => {} ,  [nb]);
+
+// 
+useMemo ( () => {
+    stocker une fonction qui réalise un traitement 
+    on ne va rééexuter cette fonction QUE si la dépendance est modifiée 
+    // exécution d'une fonction SI modification 
+}  , [] )
+
