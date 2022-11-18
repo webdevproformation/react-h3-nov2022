@@ -30,3 +30,4 @@ permettre de pouvoir visualiser (le store) dans une extension dans le navigateur
 
 créer un nouveau lien dans la barre de menu redux => /redux
 
+index.js => ajouter pas mal d'import 
