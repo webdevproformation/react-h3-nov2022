@@ -17,7 +17,7 @@ const store = createStore(
   reducer , composeWithDevTools(applyMiddleware(thunk))
 )
 
-store.dispatch(getArticles());
+// store.dispatch(getArticles());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
